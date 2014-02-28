@@ -10,4 +10,23 @@
 
 @implementation MackenziePalavra
 
+@synthesize palavra, nomeImagem;
+
+-(id)initWithPalavra:(NSString *)p andImagem:(NSString *)img {
+    self = [super init];
+    if (self) {
+        palavra = p;
+        nomeImagem = img;
+    }
+    return self;
+}
+
+-(NSString *)obterLetraIncialDaPalavra {
+    NSString *letraInicial = [NSString stringWithFormat:@"%c", [palavra characterAtIndex:0]];
+    
+    letraInicial = [letraInicial uppercaseString];
+    
+    return letraInicial;
+}
+
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MackenziePalavra.h"
 
-@interface MackenzieDicionario : NSObject
+@interface MackenzieDicionario : NSObject {
+    NSMutableArray *dicionario;
+}
+
++(MackenzieDicionario *)sharedInstance;
+-(NSMutableArray *)obterDicionario;
 
 @end

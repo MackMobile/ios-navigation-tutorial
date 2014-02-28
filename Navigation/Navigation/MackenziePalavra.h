@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MackenziePalavra : NSObject
+@interface MackenziePalavra : NSObject {
+    NSString *palavra;
+    NSString *nomeImagem;
+}
+
+@property NSString *palavra, *nomeImagem;
+
+-(id)initWithPalavra:(NSString *)p andImagem:(NSString *)img;
+-(NSString *)obterLetraIncialDaPalavra;
 
 @end
